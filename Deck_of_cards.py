@@ -31,11 +31,23 @@ class Deck:
     def drawCard(self):
         return self.cards.pop()
 
-deck = Deck()
-deck.shuffle()
-card = deck.drawCard()
-card.show()
 
 class Player:
-    def __init__(self):
-        pass
+    def __init__(self,name):
+        self.name = name
+        self.hand = []
+
+    def draw(self,deck):
+        self.hand.append(deck.drawCard())
+        return self
+
+    def showHand(self):
+        for card in self.hand:
+            card.show()
+
+deck = Deck()
+deck.shuffle()
+
+Darrel = Player("Darrel")
+Darrel.draw(deck)
+Darrel.showHand()
