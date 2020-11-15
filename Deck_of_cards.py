@@ -28,9 +28,13 @@ class Deck:
             r = random.randint(0,i)
             self.cards[i],self.cards[r] = self.cards[r], self.cards[i]
 
+    def drawCard(self):
+        return self.cards.pop()
+
 deck = Deck()
 deck.shuffle()
-deck.show()
+card = deck.drawCard()
+card.show()
 
 class Player:
     def __init__(self):
