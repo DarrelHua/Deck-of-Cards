@@ -48,6 +48,11 @@ class Player:
 deck = Deck()
 deck.shuffle()
 
-Darrel = Player("Darrel")
-Darrel.draw(deck)
-Darrel.showHand()
+
+player = Player("Darrel")
+player.draw(deck)
+player.showHand()
+
+
+
+
